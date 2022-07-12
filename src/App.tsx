@@ -13,6 +13,7 @@ function App() {
   const [charCounter, setCharCounter] = useState<number>(0);
   const [textMessage, setTextMessage] = useState<string>("");
   const [inputIsRequired, setInputIsRequired] = useState<boolean>(false);
+
   const CountText = () => {
     //Since Javascript does not accept unicode regex this is all the words in unicode
     // You can see the whole regex here https://util.unicode.org/UnicodeJsps/regex.jsp?a=%5Cp%7BL%7D%2B&b=The+35+quick+brown+fox+jumped+over+1.234+lazy+dogs%3A+1%3A234.
@@ -22,6 +23,7 @@ function App() {
     setWordCounter(textMessage.match(regexset) ? textMessage.match(regexset)!.length : 0);
     setCharCounter(textMessage.replace(/\s/g, "").length);
   }
+
   function CountAndClean() {
     if(textMessage.length===0){
       setInputIsRequired(true);
@@ -31,6 +33,7 @@ function App() {
       setTextMessage("");
     }
   }
+  
   function ChangeText(e: React.ChangeEvent<HTMLTextAreaElement>) {
     setInputIsRequired(false);
     CountText();

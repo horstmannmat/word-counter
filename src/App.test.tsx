@@ -16,14 +16,16 @@ test('tests 3 words of 3 chars each', () => {
   expect(resultText.textContent).toEqual(expectText);
 });
 
-test('tests when nothing has changed', () => {
-  render(<App />);
+test('tests when nothing has changed and Display error message', () => {
+  const dom = render(<App />);
   const countButton =  screen.getByTestId('count-button');
   fireEvent.click(countButton);
   const resultText =  screen.getByTestId('count-result-text');
 
   const wordValue = 0;
   const charValue = 0;
+  const errorMessage =  document.querySelector('.MuiFormHelperText-root');
+  expect(errorMessage?.textContent).toEqual('Input is Required');
 
   const expectText = `You Have ${wordValue} words and ${charValue} characteres`;
   expect(resultText.textContent).toEqual(expectText);

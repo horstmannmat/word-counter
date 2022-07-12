@@ -42,4 +42,13 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
+## Main File
 
+### `src/App.tsx`
+
+All the magic happens here, the main function is render where it renders the component
+and the second most important is CountText(), it set the text of how many words our input has.
+I believe that I covered almost all possible words in almost all alphabets, it does not verify if that word in fact exists, but invented word after been invented turns into a word [.](https://en.wikipedia.org/wiki/Parmenides)
+
+### `src/App.test.tsx`
+This file is where the test occurs, feel free to add new tests  
