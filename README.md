@@ -1,5 +1,6 @@
 # Word Counter
 
+## Scope
 As a user when I view the application then I see a form containing a text box to enter a body of text and when I submit the form with some text then I see a result containing the number of words in the text box
 and when I submit the form with an empty text then I see a form error telling me that some text input is required.
 
@@ -31,7 +32,7 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode.
 
 ### `yarn build`
 
